@@ -8,7 +8,7 @@
         {
             var datesOverlap = Storage.Meetings.Any(x => meeting != x && meeting.StartDate <= x.EndDate && meeting.EndDate >= x.StartDate);
             if (datesOverlap)
-                PrintController.Execute("В это время нельзя добавить встречу. Причина - обнаружено пересечение. Введите даты снова");
+                PrintController.Execute("Внимание! В это время нельзя указать начало/окончание встречи - обнаружено пересечение. Введите даты снова");
             return datesOverlap;
         }
 
